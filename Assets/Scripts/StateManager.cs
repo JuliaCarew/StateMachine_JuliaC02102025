@@ -56,12 +56,7 @@ public class StateManager : MonoBehaviour
         {
             Debug.Log("Switched to MainMenu State");
             MainMenuState();
-        }
-        //if (Input.GetKeyDown(KeyCode.G))
-        //{
-        //    Debug.Log("Switched to Gameplay State");
-        //    GameplayState();
-        //}
+        }       
     }
 
     // Handles any specific actions that need to occur when switching to a new state
@@ -73,12 +68,12 @@ public class StateManager : MonoBehaviour
             case GameState.MainMenu_State:
                 _gameManager._uiManager.DisplayMainMenuUI();
 
-
                 Time.timeScale = 0;
                 break;
 
             case GameState.Gameplay_State:
                 _gameManager._uiManager.DisplayGameplayUI();
+                Cursor.visible = false;
 
                 Time.timeScale = 1;
                 break;
