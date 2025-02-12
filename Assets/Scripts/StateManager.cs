@@ -67,6 +67,7 @@ public class StateManager : MonoBehaviour
         {            
             case GameState.MainMenu_State:
                 _gameManager._uiManager.DisplayMainMenuUI();
+                Cursor.visible = true;
 
                 Time.timeScale = 0;
                 break;
@@ -80,6 +81,7 @@ public class StateManager : MonoBehaviour
 
             case GameState.Paused_State:
                 _gameManager._uiManager.DisplayPausedUI();
+                Cursor.visible = true;
 
                 Time.timeScale = 0;
                 break;            
